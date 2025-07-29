@@ -1,0 +1,284 @@
+/* Reset some default styles */
+:root {
+    --primary-color: #492361;
+    --secondary-color: #99518c;
+    --text-color: #fff;
+    --secondary-text-color: #7a87b2;
+    --black: #000;
+    --dark_blue: #1d2536;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+
+body {
+    font-family: 'Arial', sans-serif;
+    color: var(--text-color);
+}
+
+/* Header styles / hero section */
+
+header nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem 3rem;
+    position: fixed;
+    background-color: var(--text-color);
+    z-index: 999;
+}
+
+header .logo {
+    width: 5%;
+}
+
+header .logo img {
+    width: 100%;
+}
+
+header .logo a {
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+header .nav-links {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    list-style: none;
+    font-size: 1.1rem;
+    text-transform: capitalize;
+}
+
+header .nav-links li a {
+    color: var(--secondary-text-color)
+}
+
+header .nav-links li a:hover {
+    color: var(--primary-color);
+    transition: color 0.3s ease-in-out;
+}
+
+header .nav-links li i {
+    color: var(--secondary-text-color);
+    transform: translate(33px, 3px);
+}
+
+header .nav-links input {
+    padding: 0.6rem 0.5rem 0.6rem 2.4rem;
+    border: none;
+    box-shadow: 0 0 3px var(--primary-color);
+    border-radius: 0.6rem;
+    outline: none;
+    width: 6rem;
+}
+
+header .nav-links input::placeholder {
+    color: var(--primary-color);
+}
+
+header .nav-links input:focus {
+    width: 10rem;
+    transition: width 0.3s ease-in-out;
+}
+
+header .hero_section {
+    width: 100%;
+    background-color: var(--secondary-color);
+    padding: 12rem 4rem 7rem;
+}
+
+.sub_head {
+    border: 1px solid #b7b6b6;
+    padding: 0.4rem 1rem;
+    border-radius: 2rem;
+    text-transform: capitalize;
+    letter-spacing: 0.2px;
+    cursor: pointer;
+}
+
+header .hero_section h1 {
+    font-size: 3.5rem;
+    text-transform: capitalize;
+    font-weight: 100;
+    max-width: 30rem;
+    margin: 1rem 0;
+}
+
+header .hero_section h1 span {
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+header .hero_section .btn {
+    margin: 2rem 0;
+}
+
+
+header .hero_section .btn a {
+    padding: 0.6rem 2.5rem;
+    border: 1px solid var(--primary-color);
+    color: white;
+    text-transform: capitalize;
+}
+
+header .hero_section .btn a:hover {
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    transition: all 0.3s ease-in-out;
+}
+
+
+main {
+    padding: 4rem 4rem 0;
+}
+
+.products_section {
+    color: var(--black);
+    text-align: center;
+}
+
+.products_section .products_titles {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-transform: capitalize;
+}
+
+.products_section .products_titles h2 {
+    font-size: 3rem;
+    color: var(--primary-color);
+}
+
+.products_section .products_container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+    text-align: start;
+}
+
+.products_section .products_container .product_card {
+    padding: 0 1rem 1rem 1rem;
+    box-shadow: 0 0 2px var(--primary-color);
+    cursor: pointer;
+    border-radius: 1rem;
+    overflow: hidden;
+}
+
+.products_section .products_container .product_card:hover {
+    box-shadow: 0 0 5px var(--primary-color);
+    transition: all 0.4s ease-in-out;
+    transform: scale(1.02);
+}
+
+.products_section .products_container .product_card:hover img {
+    transform: scale(1.05);
+    transition: all 0.4s ease-in-out;
+}
+
+.products_section .products_container .product_card img {
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+    aspect-ratio: 4 / 3;
+    object-fit: contain;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+}
+
+.products_section .products_container .product_card h3 {
+    color: var(--dark_blue);
+    margin: 1rem 0 0;
+    font-size: 1.5rem;
+}
+
+.products_section p {
+    color: gray;
+    margin: 0.5rem 0;
+}
+
+.products_section .products_container .product_card .price {
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--dark_blue);
+}
+
+.products_section .products_container .product_card .btn_secondary {
+    display: block;
+    background: var(--secondary-color);
+    padding: 1rem;
+    text-align: center;
+    color: var(--text-color);
+    text-transform: capitalize;
+    border-radius: 0.5rem;
+    margin: 1rem 0;
+}
+
+.products_section .products_container .product_card .btn_secondary:hover {
+    background: var(--primary-color);
+    color: var(--text-color);
+    transition: all 0.3s ease-in-out;
+}
+
+
+.products_section .btn {
+    display: inline-block;
+    text-align: center;
+    margin: 3rem auto;
+    padding: 1rem 2rem;
+    box-shadow: 0 0 2px var(--primary-color);
+    text-transform: capitalize;
+    border-radius: 0.5rem;
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+.products_section .btn:hover {
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    transition: all 0.3s ease-in-out;
+}
+
+.blog_section {
+    margin: 3rem 0 0;
+}
+
+.blog_section .blog_titles {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.blog_section .sub_head {
+    border: none;
+}
+
+
+.blog_section .products_container .product_card:hover h3 {
+    color: var(--primary-color);
+    transition: color ease-in-out;
+}
+
+
+
+footer {
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    padding: 2rem 4rem;
+    text-align: center;
+}
