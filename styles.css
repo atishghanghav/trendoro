@@ -21,9 +21,10 @@ body {
     color: var(--text-color);
 }
 
-/* Header styles / hero section */
+/* Header styles/hero section */
 
 header nav {
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
